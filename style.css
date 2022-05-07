@@ -21,7 +21,8 @@ main {
 }
 .text-entrada {
     resize: none;
-	height: 146%;
+	/* height: 146%; */
+	height: 90%;
     width: 71%;
     border-width: initial;
     border-style: none;
@@ -52,8 +53,10 @@ h6 img {
 	float: right;
     position: relative;
     width: 28%;
-    height: 944px;
-	top: -590px;
+    /* height: 944px; */
+	height: 730px;
+	/* top: -590px; */
+	top: -663px;
     right: 30px;
 	
     box-shadow: rgba(0, 0, 0, 0.08) 0px 24px 32px -8px;

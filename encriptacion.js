@@ -61,7 +61,8 @@ btnCopiar.addEventListener('click', () => {
 //DECLARACION DE FUNCIONES
 //validacion de minusculas y acentos
 function validarMayusculasAcentos(cadena){
-    let  textRegex = /[a-z0-9_]+/g;
+    let  textRegex = /[a-z0-9_]/g;
+    
     let noValido = document.querySelector('#alertaValidacion');
     if(!textRegex.test(cadena)){
         noValido.classList.add('alert');
