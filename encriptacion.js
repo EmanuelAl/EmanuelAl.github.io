@@ -17,13 +17,20 @@ btnEncriptador.addEventListener('click', ()=> {
     btnCopiar.classList.remove('invisible')
     textDeSalida.classList.remove('invisible');
     
-    let textoEncriptado = encriptador(textIngresado.value);
-    textDeSalida.value = textoEncriptado;
-    
-    textIngresado.value = '';
-    btnCopiar.classList.remove('copiado');
-    btnCopiar.innerHTML = 'Copiar';
-    
+    //validando minusculas y acentos 
+    if(!validarMayusculasAcentos(textIngresado.value)){
+        return;
+    }else{
+        console.log('es true');
+        let textoEncriptado = encriptador(textIngresado.value);
+        textDeSalida.value = textoEncriptado;
+        
+        textIngresado.value = '';
+        btnCopiar.classList.remove('copiado');
+        btnCopiar.innerHTML = 'Copiar';
+        
+    }
+
 });
 
 //Desencriptacion
@@ -51,7 +58,20 @@ btnCopiar.addEventListener('click', () => {
 
 })
 
-//Declaracion de funciones 
+//DECLARACION DE FUNCIONES
+//validacion de minusculas y acentos
+function validarMayusculasAcentos(cadena){
+    let  textRegex = /[a-z0-9_]+/g;
+    let noValido = document.querySelector('#alertaValidacion');
+    if(!textRegex.test(cadena)){
+        noValido.classList.add('alert');
+     return false;
+    }else{
+        noValido.classList.remove('alert');
+        return true;
+    }
+    
+}
 
 function encriptador(cadena) {
 

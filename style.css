@@ -144,6 +144,10 @@ h6 img {
 	color: green;
 }
 
+.alert{
+	color: red;
+}
+
 footer {
 	position: relative;
     width: 44%;
