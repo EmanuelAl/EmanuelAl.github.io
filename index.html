@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <!-- estilos -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fuente de la letra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./img/logo.png" alt="Logo" class="logo">
+    </header>
+    <main>
+        <section class="container">
+            <textarea  class="text-entrada" cols="30" rows="5" placeholder="Ingrese el texto aqui"></textarea>
+
+            
+            <h6 id="alertaValidacion"><img src="img/exclamacion.png" alt="exclamacion">Solo letras minúsculas y sin acentos</h6>
+            <button class="btn btn-encriptar">Encriptar</button>
+            <button class="btn btn-desencriptar">Desencriptar</button>
+        </section>
+        <div class="card-mostrarMensaje">
+            <div class="sinMensaje">
+                <img src="img/Muñeco.png" alt="picture muñeco" id="img-muñeco">
+                <h3 >Ningún mensaje fue encontrado</h3>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <textarea name="" id="" cols="30" rows="10" class="resultado"></textarea>
+            <button  class="btn btn-copiar">Copiar</button>
+        </div>
+    </main>
+    <footer>&copy; Emanuel Alderete</footer>
+    
+    <script src="encriptacion.js"></script>
+</body>
+</html>
